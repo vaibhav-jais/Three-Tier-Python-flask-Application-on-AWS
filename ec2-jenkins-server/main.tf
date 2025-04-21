@@ -37,3 +37,5 @@ resource "aws_route53_record" "jenkins" {
   ttl     = 300
   records = [module.ec2_jenkins.jenkins_public_ip]
 }
+
+
