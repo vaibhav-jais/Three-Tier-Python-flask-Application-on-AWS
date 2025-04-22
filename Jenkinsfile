@@ -67,7 +67,7 @@ pipeline {
                 script {
                     if (params.DESTROY_TERRAFORM) {
                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials-vaibhav-user']]){
-                            dir('inpython-flask-app-infra') {
+                            dir('python-flask-app-infra') {
                                 sh 'echo "=================Terraform Destroy=================="'
                                 sh 'terraform destroy -auto-approve'
                             }
